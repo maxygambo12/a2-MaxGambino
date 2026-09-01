@@ -1,8 +1,8 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "a2-MaxGambino",
+  "version": "1.0.0",
+  "description": "Car dealership inventory manager — CS4241 Assignment 2",
+  "author": "Max Gambino",
   "scripts": {
     "start": "node server.js"
   },

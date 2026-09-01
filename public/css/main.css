@@ -1,4 +1,277 @@
+/* =====================
+   Reset & Base
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background:black;
-  color:white;
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f8;
+  color: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   Header  (#site-header)
+   ===================== */
+#site-header {
+  background: #1a1a2e;
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+#site-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #9aa3b8;
+  margin-top: 0.3rem;
+}
+
+/* =====================
+   Main Layout (Flexbox)
+   ===================== */
+#main-content {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+/* =====================
+   Form Section (#form-section)
+   ===================== */
+#form-section {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 280px;
+  flex-shrink: 0;
+}
+
+#form-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.9rem;
+}
+
+.field-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #5a6478;
+  margin-bottom: 0.3rem;
+}
+
+.field-group input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccd3e0;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+  transition: border-color 0.2s;
+}
+
+.field-group input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+/* =====================
+   Buttons
+   ===================== */
+button {
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#submit-btn {
+  background: #4f46e5;
+  color: #ffffff;
+  flex: 1;
+}
+
+#submit-btn:hover {
+  background: #4338ca;
+}
+
+#cancel-btn {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+#cancel-btn:hover {
+  background: #d1d5db;
+}
+
+.edit-btn {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.78rem;
+}
+
+.edit-btn:hover {
+  background: #c7d2fe;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.78rem;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =====================
+   Inventory Section (#inventory-section)
+   ===================== */
+#inventory-section {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+#inventory-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+/* =====================
+   Table (#inventory-table)
+   ===================== */
+#inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+#inventory-table th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  background: #f0f2f8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #5a6478;
+  border-bottom: 2px solid #dde2f0;
+}
+
+#inventory-table td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid #eef0f8;
+  color: #1a1a2e;
+  vertical-align: middle;
+}
+
+#inventory-table tr:last-child td {
+  border-bottom: none;
+}
+
+#inventory-table tr:hover td {
+  background: #f8f9ff;
+}
+
+/* =====================
+   Value Rating Badges (.rating)
+   ===================== */
+.rating {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.rating-great-deal {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.rating-good-value {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.rating-fair-price {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.rating-premium {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+/* =====================
+   Action Cell
+   ===================== */
+.action-cell {
+  display: flex;
+  gap: 0.4rem;
+}
+
+/* =====================
+   Empty State
+   ===================== */
+#empty-msg {
+  text-align: center;
+  color: #9aa3b8;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
+
+/* =====================
+   Footer (#site-footer)
+   ===================== */
+#site-footer {
+  background: #1a1a2e;
+  color: #9aa3b8;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.82rem;
 }
