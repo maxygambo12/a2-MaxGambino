@@ -27,6 +27,10 @@ confirm the prompt.
 4. The user accidentally deleted an item, and could not remember what the values were. This could be solved
    with an undo button or a confirmation on the delete.
 
+1. Justin Fletcher
+2. The user didn't like how the carrot buttons only incremented price by one.
+3. The user surprised by how fluid the edit functionality was.
+4. The user suggested that having the carrot buttons increment by larger amounts the longer they were held down.
 
 ## Acknowledgements
 
