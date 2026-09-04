@@ -78,6 +78,7 @@ const renderTable = function( data ) {
 
   tbody.querySelectorAll( '.delete-btn' ).forEach( function( btn ) {
     btn.addEventListener( 'click', async function() {
+      if ( !confirm( 'Are you sure you want to delete this car?' ) ) return
       const data = await postJSON( '/delete', { id: parseInt( btn.dataset.id ) } )
       currentData = data
       renderTable( data )
